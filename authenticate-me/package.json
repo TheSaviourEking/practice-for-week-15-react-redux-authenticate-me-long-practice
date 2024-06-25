@@ -1,0 +1,22 @@
+{
+  "name": "authenticate-me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "post-build": "npm run start",
+    "install": "npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm run start --prefix backend",
+    "dev:frontend": "npm run start --prefix frontend",
+    "db:create": "npm run db:create --prefix backend",
+    "db:migrate": "npm run db:migrate --prefix backend",
+    "db:seed:all":"npm run db:seed:all --prefix backend",
+    "start": "npm start --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "build:prod": "npm run install && npm run post-build",
+    "start:prod": "NODE_ENV=production npm start --prefix backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
